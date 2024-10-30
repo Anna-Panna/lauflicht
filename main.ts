@@ -1,6 +1,6 @@
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     status = 1
-    strip.setPixelColor(0, neopixel.rgb(randint(0, 200), randint(0, 200), randint(0, 200)))
+    strip.setPixelColor(0, neopixel.rgb(randint(0, 80), randint(0, 80), randint(0, 80)))
     for (let Index = 0; Index <= 32; Index++) {
         if (status == 1) {
             strip.show()
