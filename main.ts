@@ -1,13 +1,6 @@
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     status = 1
     strip.setPixelColor(0, neopixel.rgb(randint(0, 80), randint(0, 80), randint(0, 80)))
-    for (let Index = 0; Index <= 32; Index++) {
-        if (status == 1) {
-            strip.show()
-            basic.pause(200)
-            strip.rotate(-1)
-        }
-    }
     strip.showColor(neopixel.colors(NeoPixelColors.Black))
 })
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
@@ -20,3 +13,21 @@ strip = neopixel.create(DigitalPin.P1, 32, NeoPixelMode.RGB)
 strip.setBrightness(50)
 status = 0
 strip.clear()
+basic.forever(function () {
+    if (status == 1 && input.isGesture(Gesture.TiltLeft)) {
+        if (status == 1) {
+            strip.show()
+            basic.pause(200)
+            strip.rotate(1)
+        }
+    }
+    if (true) {
+        if (status == 1 && input.isGesture(Gesture.TiltRight)) {
+            if (status == 1) {
+                strip.show()
+                basic.pause(200)
+                strip.rotate(-1)
+            }
+        }
+    }
+})
