@@ -1,6 +1,6 @@
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     status = 1
-    strip.setPixelColor(0, neopixel.rgb(randint(0, 255), randint(0, 255), randint(0, 255)))
+    strip.setPixelColor(0, neopixel.rgb(randint(0, 200), randint(0, 200), randint(0, 200)))
     for (let Index = 0; Index <= 32; Index++) {
         if (status == 1) {
             strip.show()
@@ -20,6 +20,3 @@ strip = neopixel.create(DigitalPin.P1, 32, NeoPixelMode.RGB)
 strip.setBrightness(50)
 status = 0
 strip.clear()
-basic.forever(function () {
-	
-})
