@@ -5,7 +5,7 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
         if (status == 1) {
             strip.show()
             basic.pause(200)
-            strip.rotate(1)
+            strip.rotate(-1)
         }
     }
     strip.showColor(neopixel.colors(NeoPixelColors.Black))
