@@ -16,9 +16,11 @@ strip.setBrightness(50)
 status = 0
 strip.clear()
 basic.forever(function () {
-    if (status == 1) {
-        strip.show()
-        basic.pause(200)
-        strip.rotate(1)
+    for (let Index = 0; Index <= 32; Index++) {
+        if (status == 1) {
+            strip.show()
+            basic.pause(200)
+            strip.rotate(1)
+        }
     }
 })
